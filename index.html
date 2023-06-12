@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+  <a-scene vr-mode-ui="enabled:false" embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled:false">
+
+    <a-assets>
+      <img id="card02" src="./VR-AR-ProjectCards/2.png">
+      <img id="card03" src="./VR-AR-ProjectCards/3.png">
+      <img id="card04" src="./VR-AR-ProjectCards/4.png">
+      <img id="card05" src="./VR-AR-ProjectCards/5.png">
+      <img id="card06" src="./VR-AR-ProjectCards/6.png">
+    </a-assets>
+
+    <!--Flight-Sim-->
+    <a-marker type="pattern" url="./pattern-marker/flight-sim/pattern-icon-01.patt">
+      <a-plane src="#card02" position="0 0 1" rotation="-90 0 0" width="2.5" height="2.5"></a-plane>
+    </a-marker>
+
+    <!--Menu-->
+    <a-marker type="pattern" url="./pattern-marker/menu/pattern-icon-02.patt">
+      <a-plane src="#card06" position="0 0 1" rotation="-90 0 0" width="2.5" height="2.5"></a-plane>
+    </a-marker>
+    
+    <!--Map-->
+    <a-marker type="pattern" url="./pattern-marker/Map/pattern-icon-03.patt">
+      <a-plane src="#card05" position="0 0 1" rotation="-90 0 0" width="2.5" height="2.5"></a-plane>
+    </a-marker>
+
+    <!--Virtual-Tour-->
+    <a-marker type="pattern" url="./pattern-marker/vt/pattern-icon-04.patt">
+      <a-plane src="#card03" position="0 0 1" rotation="-90 0 0" width="2.5" height="2.5"></a-plane>
+    </a-marker>
+
+    <!--Filter-->
+    <a-marker type="pattern" url="./pattern-marker/flight-sim/pattern-icon-05.patt">
+
+    </a-marker>
+
+    <!--Fps-->
+    <a-marker type="pattern" url="./pattern-marker/shooter/pattern-icon-06.patt">
+      <a-plane src="#card04" position="0 0 1" rotation="-90 0 0" width="2.5" height="2.5"></a-plane>
+    </a-marker>
+
+
+  </a-scene>
+
+ 
+</body>
+
+</html>
